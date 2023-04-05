@@ -18,7 +18,8 @@ namespace AGZ
             if (Conc > 2)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("Внимание превышение концентрации метана метана !");
+                Console.WriteLine($"{Conc}% Внимание превышение концентрации метана метана !");
+                Console.WriteLine($"Оповещение отправлено оператору АГЗ и СМС отвественным руководителям");
                 Console.ForegroundColor = ConsoleColor.White;
                 for (int i = 0; i < 3; i++)
                 {

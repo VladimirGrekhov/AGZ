@@ -13,11 +13,13 @@ internal class Program
         PrintText1.Start();
         char chKey = Console.ReadKey(true).KeyChar;
         if (chKey == '1')
+            Console.Clear();
+        Console.WriteLine("Режим ручной проверки \n");
 
         {
             do
             {
-                MetSenHan1.inConc(Input1.Doub("Введите концентрацию метана "));
+                MetSenHan1.inConc(Input1.Doub("Введите концентрацию метана в % "));
                 Console.WriteLine("1 - продолжить");
                 Console.WriteLine("2 - выход");
                 chKey = Console.ReadKey(true).KeyChar;

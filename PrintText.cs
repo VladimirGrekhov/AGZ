@@ -14,6 +14,7 @@ namespace AGZ
             Console.WriteLine("*** Вас приветствует Автоматическая Газовая Защита *** \n ");
             Console.Beep();
             Console.ForegroundColor = ConsoleColor.DarkBlue;
+            Console.WriteLine("0 - Работа.");
             Console.WriteLine("1 - Ручной режим проверки.");
             Console.WriteLine("2 - Автоматический режим проверки.");
         }
