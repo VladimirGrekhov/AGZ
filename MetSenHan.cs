@@ -23,7 +23,7 @@ namespace AGZ
             } else
             {
                 Console.ForegroundColor = ConsoleColor.Green;
-                Console.Write("Концентрация метана в норме ");
+                Console.WriteLine("Концентрация метана в норме ");
                 Console.ForegroundColor = ConsoleColor.White;
             }
         }
