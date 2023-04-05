@@ -1,4 +1,6 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿
+using AGZ;
+
 Console.ForegroundColor = ConsoleColor.DarkGreen;
 Console.WriteLine("*** Вас приветствует Автоматическая Газовая Защита *** \n ");
 Console.Beep();
@@ -7,9 +9,9 @@ Console.WriteLine("1 - Ручной режим проверки.");
 Console.WriteLine("2 - Автоматический режим проверки.");
 DMS DMS1 = new DMS();
 ManTest ManTest1 = new ManTest();
-ManTest1.test();
+Input Input1= new Input();
 
-DMS1.print(0.17);
+ManTest1.test(Input1.Doub("Введите концентрацию метана "));
  class DMS
 {   
     public void print(double Conc)
@@ -22,37 +24,11 @@ DMS1.print(0.17);
 
 class ManTest // Manual test - Режим ручной проверки
 {
-    public void test()
+    public void test(double Conc)
     {
-        Console.WriteLine("Введите проверочную концентрацию газа метана.");
-        char chValue ;
-        double dValue = 0;
-        double dValueEnd = 0;
-        
-            for (int i = 0; i < 4; i++)
-            {
-                do
-                {
-                    chValue = Console.ReadKey(true).KeyChar;
-                } while (chValue < '0' || chValue > '9');
-                dValue = double.Parse(chValue.ToString());
-                Console.Write(dValue);
-                switch (i)
-                {
-                case 0: dValueEnd = dValue * 10; break;
-                case 1: dValueEnd = dValue; break;
-                case 2: dValueEnd = dValue /10; break;
-                case 3: dValueEnd = dValue/100; break;
-                }
-            }
-        Console.WriteLine(dValueEnd);
+        Console.WriteLine(Conc);
         Console.Beep();
         Console.Beep();
-
-
     }
-
     public int Conc { set; get; }  = 0;
-   
-
 }
