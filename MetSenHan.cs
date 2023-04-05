@@ -20,6 +20,10 @@ namespace AGZ
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("Внимание превышение концентрации метана метана !");
                 Console.ForegroundColor = ConsoleColor.White;
+                for (int i = 0; i < 3; i++)
+                {
+                    Console.Beep();
+                }
             } else
             {
                 Console.ForegroundColor = ConsoleColor.Green;
