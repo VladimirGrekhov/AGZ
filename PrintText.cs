@@ -16,7 +16,9 @@ namespace AGZ
             Console.ForegroundColor = ConsoleColor.DarkBlue;
             Console.WriteLine("0 - Работа.");
             Console.WriteLine("1 - Ручной режим проверки.");
-            Console.WriteLine("2 - Автоматический режим проверки.");
+            Console.WriteLine("2 - Автоматический режим проверки. \n");
+
+            Console.WriteLine(" Датчики метана в шахте. " );
         }
 
     }
