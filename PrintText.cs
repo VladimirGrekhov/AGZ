@@ -21,6 +21,7 @@ namespace AGZ
 
         public void SensMetPr()
         {
+            Console.ForegroundColor = ConsoleColor.DarkBlue;
             Console.WriteLine(" Датчики метана в шахте. ");
             Console.WriteLine("1. Датчик метана рассположен на исходящей струе шахты (уставка 0.75%) - 0.1% ");
 

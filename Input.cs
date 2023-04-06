@@ -14,6 +14,7 @@ namespace AGZ
             char chValue;
             double dValue = 0;
             double dValueEnd = 0;
+            
 
             for (int i = 0; i < 4; i++)
             {
@@ -31,6 +32,22 @@ namespace AGZ
                 }
             }
                         return dValueEnd;
+        }
+        public int iNumSen(int max)
+        {
+            char chValue;
+            int iValue = 0;
+            int iValueEnd = 0;
+            for (int i = 0; i < 1; i++) {
+                Console.Write(" Введите номер датчика ");
+                do
+                {
+                    chValue = Console.ReadKey(true).KeyChar;
+                } while (chValue < '0' || chValue > '8');
+                iValue = int.Parse(chValue.ToString());
+            }
+            iValueEnd = iValue;
+            return iValue;
         }
     }
 }
