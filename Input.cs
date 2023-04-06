@@ -47,6 +47,7 @@ namespace AGZ
                 iValue = int.Parse(chValue.ToString());
             }
             iValueEnd = iValue;
+            Console.Write($"{iValueEnd}\n");
             return iValue;
         }
     }

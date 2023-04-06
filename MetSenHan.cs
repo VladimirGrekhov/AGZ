@@ -8,14 +8,11 @@ namespace AGZ
 {
     internal class MetSenHan
     {
-        public void Print(double Conc)
-        {
-            Console.WriteLine(Conc);
-        }
+        
 
-        public void inConc(double Conc)
+        public void inConc( double HiConc, double Conc)
         {
-            if (Conc > 2)
+            if (Conc > HiConc)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine($"{Conc}% Внимание превышение концентрации метана метана !");

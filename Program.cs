@@ -32,8 +32,7 @@ internal class Program
             {   
                 Console.Clear();
                 PrintText1.SensMetPr(arHiConc);
-                Console.WriteLine(Input1.iNumSen(11));
-                MetSenHan1.inConc(Input1.Doub("Введите концентрацию метана в % "));
+                MetSenHan1.inConc(arHiConc[Input1.iNumSen(11)],Input1.Doub("Введите концентрацию метана в % "));
                 Console.WriteLine("1 - продолжить");
                 Console.WriteLine("2 - выход");
                 chKey = Console.ReadKey(true).KeyChar;
