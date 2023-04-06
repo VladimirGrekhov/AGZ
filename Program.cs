@@ -9,16 +9,17 @@ internal class Program
         PrintText PrintText1 = new PrintText();
         MetSenHan MetSenHan1 = new MetSenHan();
         Input Input1 = new Input();
-
+        
         PrintText1.Start();
+        PrintText1.SensMetPr();
         char chKey = Console.ReadKey(true).KeyChar;
         if (chKey == '1')
             Console.Clear();
         Console.WriteLine("Режим ручной проверки \n");
 
         {
-            do
-            {
+            do // Режим проверки
+            {   
                 MetSenHan1.inConc(Input1.Doub("Введите концентрацию метана в % "));
                 Console.WriteLine("1 - продолжить");
                 Console.WriteLine("2 - выход");

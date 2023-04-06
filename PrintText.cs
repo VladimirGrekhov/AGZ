@@ -17,8 +17,11 @@ namespace AGZ
             Console.WriteLine("0 - Работа.");
             Console.WriteLine("1 - Ручной режим проверки.");
             Console.WriteLine("2 - Автоматический режим проверки. \n");
+        }
 
-            Console.WriteLine(" Датчики метана в шахте. " );
+        public void SensMetPr()
+        {
+            Console.WriteLine(" Датчики метана в шахте. ");
             Console.WriteLine("1. Датчик метана рассположен на исходящей струе шахты (уставка 0.75%) - 0.1% ");
 
             Console.WriteLine("2. Датчик метана рассположен на исходящей струе добычного участка №1  (уставка 1%) - 0.13% ");
