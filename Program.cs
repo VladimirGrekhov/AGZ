@@ -5,7 +5,9 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-       
+        double[] arHiConc = new double[] { 0.75,    1,    1,   2,   1,    2,    1,   2 };
+        double[] arConc = new double[]   { 0.12,  0.2, 0.23, 0.5, 0.2, 0.31, 0.23, 0.41 };
+
         PrintText PrintText1 = new PrintText();
         MetSenHan MetSenHan1 = new MetSenHan();
         Input Input1 = new Input();
@@ -13,7 +15,7 @@ internal class Program
         {
          Console.Clear();
          PrintText1.Start();
-        PrintText1.SensMetPr();
+        PrintText1.SensMetPr(arHiConc);
             char chKey;
             do 
             {
@@ -29,7 +31,7 @@ internal class Program
             do 
             {   
                 Console.Clear();
-                PrintText1.SensMetPr();
+                PrintText1.SensMetPr(arHiConc);
                 Console.WriteLine(Input1.iNumSen(11));
                 MetSenHan1.inConc(Input1.Doub("Введите концентрацию метана в % "));
                 Console.WriteLine("1 - продолжить");
