@@ -22,7 +22,7 @@ namespace AGZ
         public void SensMetPr( double[] arHiConc, double[] arConc, string[] insLoc)
         {
             Console.ForegroundColor = ConsoleColor.DarkBlue;
-            Console.WriteLine(" Датчики метана в шахте. ");
+            Console.WriteLine(" Датчики метана в шахте: ");
             for (int i = 0; i < insLoc.Length; i++) 
             {
                 this.ConcColor(arHiConc[i], arConc[i], insLoc[i]);
