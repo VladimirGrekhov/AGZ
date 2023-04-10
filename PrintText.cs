@@ -10,14 +10,23 @@ namespace AGZ
     {
         public void Start() 
         {
-            Console.ForegroundColor = ConsoleColor.DarkGreen;
-            Console.WriteLine("*** Вас приветствует Автоматическая Газовая Защита *** \n ");
-            Console.Beep();
-            Console.ForegroundColor = ConsoleColor.DarkBlue;
-            Console.WriteLine("0 - Работа.");
-            Console.WriteLine("1 - Ручной режим проверки.");
-            Console.WriteLine("2 - Автоматический режим проверки. \n");
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("  *** Автоматическая Газовая Защита  шахты  *** \n");
+            
         }
+
+        public void Mid()
+        {
+            Console.Beep();
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("\n0 - Работа.");
+            Console.WriteLine("1 - Ручной режим проверки.");
+            Console.WriteLine("2 - Автоматический режим проверки.");
+            Console.WriteLine("Нажмите 1 - 3 ");
+        }
+
+
 
         public void SensMetPr( double[] arHiConc, double[] arConc, string[] insLoc)
         {
@@ -41,6 +50,10 @@ namespace AGZ
             if(arConc >= arHiConc)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
+            }
+            else if (arConc < 0)
+            {
+                Console.ForegroundColor = ConsoleColor.Yellow;
             }
             else
             {

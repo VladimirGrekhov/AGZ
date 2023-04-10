@@ -32,9 +32,9 @@ internal class Program
         Input Input1 = new();
         do
         {
-         Console.Clear();
          PrintText1.Start();
-        PrintText1.SensMetPr(arHiConc, arConc, insLoc);
+         PrintText1.SensMetPr(arHiConc, arConc, insLoc);
+            PrintText1.Mid();
             char chKey;
             do 
             {
@@ -56,7 +56,7 @@ internal class Program
                 Console.WriteLine("Режим ручной проверки \n");
                 PrintText1.SensMetPr(arHiConc, arConc, insLoc);
                 int NumSen = Input1.iNumSen(11);
-                double ConcMet = Input1.Doub("Введите концентрацию метана в % ");
+                double ConcMet = Input1.Doub("Введите концентрацию метана в % q - имитация неисправности ");
                 Console.Clear();
                 Console.ForegroundColor = ConsoleColor.White;
                 Console.WriteLine("Режим ручной проверки \n");

@@ -21,6 +21,13 @@ namespace AGZ
                 do
                 {
                     chValue = Console.ReadKey(true).KeyChar;
+                    if (chValue == 'q')
+                    {
+                        i = 5;
+                        dValueEnd = -1;
+                        chValue = '1';
+                        break;
+                    }
                 } while (chValue < '0' || chValue > '9');
                 dValue = double.Parse(chValue.ToString());
                 switch (i)
@@ -39,7 +46,8 @@ namespace AGZ
             int iValue = 0;
             int iValueEnd = 0;
             for (int i = 0; i < 1; i++) {
-                Console.Write(" Введите номер датчика ");
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.Write("\n Введите номер датчика ");
                 do
                 {
                     chValue = Console.ReadKey(true).KeyChar;
