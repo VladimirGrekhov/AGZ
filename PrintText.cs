@@ -38,7 +38,14 @@ namespace AGZ
             Console.Write($"{arHiConc}%");
             Console.ForegroundColor = ConsoleColor.DarkBlue;
             Console.Write(") - ");
-            Console.ForegroundColor = ConsoleColor.Green;
+            if(arConc >= arHiConc)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+            }
             Console.Write($"{arConc}%\n");
         }
 

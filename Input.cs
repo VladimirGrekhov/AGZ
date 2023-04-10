@@ -31,7 +31,7 @@ namespace AGZ
                     case 3: dValueEnd = dValueEnd + dValue / 100; Console.Write(dValue); Console.Write('\n'); break;
                 }
             }
-                        return dValueEnd;
+                        return Math.Round(dValueEnd, 2); //returns 2.00dValueEnd; очень важно !!!
         }
         public int iNumSen(int max)
         {

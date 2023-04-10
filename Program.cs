@@ -63,11 +63,16 @@ internal class Program
                 double tempConc = arConc[NumSen];
                 arConc[NumSen] = ConcMet;
                 PrintText1.SensMetPr(arHiConc, arConc, insLoc);
-                MetSenHan1.inConc(arHiConc[NumSen], ConcMet);
+                MetSenHan1.inConc(arHiConc[NumSen], ConcMet, NumSen);
                 Console.WriteLine("1 - продолжить");
                 Console.WriteLine("2 - выход");
-                chKey = Console.ReadKey(true).KeyChar;
-                if (chKey == '2')
+                        do
+                        {
+                            chKey = Console.ReadKey(true).KeyChar;
+                           
+                        } while (chKey != '1' && chKey != '2');
+                arConc[NumSen] = tempConc;
+                        if (chKey == '2')
                 {
                     break;
                 }

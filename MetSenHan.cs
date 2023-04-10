@@ -13,12 +13,12 @@ namespace AGZ
         {
 
         }
-        public void inConc( double HiConc, double Conc)
+        public void inConc( double HiConc, double Conc, int numSen)
         {
             if (Conc > HiConc)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine($"{Conc}% Внимание превышение концентрации метана метана !");
+                Console.WriteLine($"{Conc}% Внимание превышение концентрации метана метана на датчике №{numSen + 1} !");
                 Console.WriteLine($"Оповещение отправлено оператору АГЗ и СМС отвественным руководителям");
                 Console.ForegroundColor = ConsoleColor.White;
                 for (int i = 0; i < 3; i++)
