@@ -43,8 +43,8 @@ namespace AGZ
                 do
                 {
                     chValue = Console.ReadKey(true).KeyChar;
-                } while (chValue < '0' || chValue > '8');
-                iValue = int.Parse(chValue.ToString());
+                } while (chValue < '1' || chValue > '8');
+                iValue = int.Parse(chValue.ToString()) - 1;
             }
             iValueEnd = iValue;
             Console.Write($"{iValueEnd}\n");

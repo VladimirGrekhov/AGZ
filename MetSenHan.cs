@@ -9,7 +9,10 @@ namespace AGZ
     internal class MetSenHan
     {
         
+        public void Print()
+        {
 
+        }
         public void inConc( double HiConc, double Conc)
         {
             if (Conc > HiConc)

@@ -45,13 +45,25 @@ internal class Program
         if (chKey == '1')// Режим проверки
             {
             Console.Clear();
-        Console.WriteLine("Режим ручной проверки \n");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("Режим ручной проверки \n");
         {
+                    
             do 
-            {   
+            {
                 Console.Clear();
+                Console.ForegroundColor = ConsoleColor.White;   
+                Console.WriteLine("Режим ручной проверки \n");
                 PrintText1.SensMetPr(arHiConc, arConc, insLoc);
-                MetSenHan1.inConc(arHiConc[Input1.iNumSen(11)],Input1.Doub("Введите концентрацию метана в % "));
+                int NumSen = Input1.iNumSen(11);
+                double ConcMet = Input1.Doub("Введите концентрацию метана в % ");
+                Console.Clear();
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine("Режим ручной проверки \n");
+                double tempConc = arConc[NumSen];
+                arConc[NumSen] = ConcMet;
+                PrintText1.SensMetPr(arHiConc, arConc, insLoc);
+                MetSenHan1.inConc(arHiConc[NumSen], ConcMet);
                 Console.WriteLine("1 - продолжить");
                 Console.WriteLine("2 - выход");
                 chKey = Console.ReadKey(true).KeyChar;
