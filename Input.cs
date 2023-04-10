@@ -44,11 +44,11 @@ namespace AGZ
                 {
                     chValue = Console.ReadKey(true).KeyChar;
                 } while (chValue < '1' || chValue > '8');
-                iValue = int.Parse(chValue.ToString()) - 1;
+                iValue = int.Parse(chValue.ToString());
             }
-            iValueEnd = iValue;
-            Console.Write($"{iValueEnd}\n");
-            return iValue;
+            iValueEnd = iValue - 1 ;
+            Console.Write($"{iValueEnd + 1}\n");
+            return iValueEnd;
         }
     }
 }
