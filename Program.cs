@@ -4,15 +4,15 @@ using System.Text;
 
 internal class Program
 {
-    private static void Main(string[] args)
+    private static void Main(string[] args)// Основной цыкл. Точка входа
     {
-        Console.OutputEncoding = System.Text.Encoding.UTF8;
-        Console.InputEncoding = System.Text.Encoding.UTF8;
+        Console.OutputEncoding = System.Text.Encoding.UTF8;// Кодировка вывода
+        Console.InputEncoding = System.Text.Encoding.UTF8;// Кодировка ввода
         Console.Clear();
         // Console.OutputEncoding = System.Text.Encoding.Unicode;
         // Console.OutputEncoding = Encoding.GetEncoding(866);
-        double[] arHiConc = new double[] { 0.75,    1,    1,   2,   1,    2,    1,   2 };
-        double[] arConc = new double[]   { 0.12,  0.2, 0.23, 0.5, 0.2, 0.31, 0.23, 0.41 };
+        double[] arHiConc = new double[] { 0.75,    1,    1,   2,   1,    2,    1,   2 };// массив уставок
+        double[] arConc = new double[]   { 0.12,  0.2, 0.23, 0.5, 0.2, 0.31, 0.23, 0.41 };// массив поступающих значений
 
         string[] insLoc = new string[]
         {
